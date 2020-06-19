@@ -7,8 +7,8 @@ import EmployerList from './components/EmployerList';
 
 //Apollo Client setup
 const client = new ApolloClient({
-  uri:"http://localhost:4000/graphql";
-});
+  uri:"http://localhost:4000/graphql"
+})
 
 function App() {
   return (

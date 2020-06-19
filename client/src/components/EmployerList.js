@@ -1,4 +1,18 @@
 import React, {Component} from 'react';
+import {gql} from 'apollo-boost';
+import {graphql} from 'react-apollo';
+
+const getEmployersQuery = gql`
+  {
+    employers{
+      name
+      location
+      positionHeld
+      workDate
+      description
+    }
+  }
+`
 
 class EmployerList extends Component{
   render(){
@@ -12,4 +26,4 @@ class EmployerList extends Component{
   }
 }
 
-export default EmployerList;
+export default graphql(getEmployersQuery)(EmployerList);
