@@ -1,5 +1,6 @@
 const graphql = require('graphql');
 const _ = require('lodash');
+const Employer = require('../models/employer');
 
 const {GraphQLObjectType,
   GraphQLString,
@@ -9,12 +10,6 @@ const {GraphQLObjectType,
   GraphQLList,
   GraphQLNonNull
 } = graphql;
-
-// dummy data
-var employers = [
-  {name: 'Ofgem', location: 'Glasgow, Scotland', positionHeld: 'Junior Developer',
-workDate: 'July 2019 - April 2020', description: 'blah blah blah', id: '1'}
-];
 
 const EmployerType = new GraphQLObjectType({
   name: 'Employer',
@@ -35,12 +30,46 @@ const RootQuery = new GraphQLObjectType({
       type: EmployerType,
       args: {id: {type: GraphQLID}},
       resolve(parent, args){
-        return _.find(employers, {id: args.id});
+        return Employer.findById(args.id);
+      }
+    },
+    employers:{
+      type: new GraphQLList(EmployerType),
+      resolve(parents,args){
+        return Employer.find({});
+      }
+    }
+  }
+});
+
+//C.R.U.D.
+const Mutation = new GraphQLObjectType({
+  name: 'Mutation',
+  fields: {
+    addEmployer:{
+      type: EmployerType,
+      args: {
+        name: {type: new GraphQLNonNull(GraphQLString)},
+        location: {type: new GraphQLNonNull(GraphQLString)},
+        positionHeld: {type: new GraphQLNonNull(GraphQLString)},
+        workDate: {type: new GraphQLNonNull(GraphQLString)},
+        description: {type: new GraphQLNonNull(GraphQLString)}
+      },
+      resolve(parent, args){
+        let employer = new Employer({
+          name: args.name,
+          location: args.location,
+          positionHeld: args.positionHeld,
+          workDate: args.workDate,
+          description: args.description
+        });
+        return employer.save();
       }
     }
   }
 });
 
 module.exports = new GraphQLSchema({
-  query: RootQuery
+  query: RootQuery,
+  mutation: Mutation
 });
