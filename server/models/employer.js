@@ -6,7 +6,7 @@ const employerSchema = new Schema({
   location: String,
   positionHeld: String,
   workDate: String,
-  description: String
+  description: String,
 });
 
-module.export = mongoose.model('Employer', employerSchema);
+module.exports = mongoose.model('Employer', employerSchema);

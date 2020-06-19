@@ -46,7 +46,7 @@ const RootQuery = new GraphQLObjectType({
 const Mutation = new GraphQLObjectType({
   name: 'Mutation',
   fields: {
-    addEmployer:{
+    addEmployer: {
       type: EmployerType,
       args: {
         name: {type: new GraphQLNonNull(GraphQLString)},
