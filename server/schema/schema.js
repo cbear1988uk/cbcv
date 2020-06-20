@@ -18,8 +18,10 @@ const EmployerType = new GraphQLObjectType({
     location: {type: GraphQLString},
     positionHeld: {type: GraphQLString},
     workDate: {type: GraphQLString},
+    id: {type: GraphQLID},
     description: {type: GraphQLString},
-    id: {type: GraphQLID}
+    description2: {type: GraphQLString},
+    description3: {type: GraphQLString}
   })
 });
 
@@ -53,7 +55,9 @@ const Mutation = new GraphQLObjectType({
         location: {type: new GraphQLNonNull(GraphQLString)},
         positionHeld: {type: new GraphQLNonNull(GraphQLString)},
         workDate: {type: new GraphQLNonNull(GraphQLString)},
-        description: {type: new GraphQLNonNull(GraphQLString)}
+        description: {type: new GraphQLNonNull(GraphQLString)},
+        description2: {type: GraphQLString},
+        description3: {type: GraphQLString}
       },
       resolve(parent, args){
         let employer = new Employer({
@@ -61,7 +65,9 @@ const Mutation = new GraphQLObjectType({
           location: args.location,
           positionHeld: args.positionHeld,
           workDate: args.workDate,
-          description: args.description
+          description: args.description,
+          description2: args.description2,
+          description3: args.description3
         });
         return employer.save();
       }

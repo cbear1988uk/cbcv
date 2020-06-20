@@ -10,6 +10,8 @@ const getEmployersQuery = gql`
       positionHeld
       workDate
       description
+      description2
+      description3
       id
     }
   }
@@ -23,11 +25,13 @@ class EmployerList extends Component{
     }else{
       return data.employers.map(employer => {
         return(
-          <div id="employer-list" key={employer.id}>
+          <div key={employer.id}>
             <h2>{employer.name}</h2>
             <li>{employer.location}</li>
             <li>{employer.positionHeld} - {employer.workDate}</li>
             <p>{employer.description}</p>
+            <p>{employer.description2}</p>
+            <p>{employer.description3}</p>
           </div>
         );
       })
