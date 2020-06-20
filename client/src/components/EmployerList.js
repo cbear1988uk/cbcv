@@ -23,11 +23,11 @@ class EmployerList extends Component{
     }else{
       return data.employers.map(employer => {
         return(
-          <div key={employer.id}>
+          <div id="employer-list" key={employer.id}>
             <h2>{employer.name}</h2>
             <li>{employer.location}</li>
             <li>{employer.positionHeld} - {employer.workDate}</li>
-            <li>{employer.description}</li>
+            <p>{employer.description}</p>
           </div>
         );
       })
