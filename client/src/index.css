@@ -1,20 +1,28 @@
 body {
-  background: #f7f7f7;
+  background: #e3e3e3;
   text-align: center;
 }
 
-#main{
-  background: #e3e3e3;
+#page-wrapper h1{
+  margin-top: 80px;
+  color: #444;
+  text-align: center;
+  font-size: 80px;
+}
+
+#page-wrapper p{
+  color: #17e354;
+}
+
+#cv-content{
+  background: #f7f7f7;
   display: block;
-  margin-top: 200px;
+  padding: 10px;
+  border-radius: 15px;
+  margin-top: 60px;
   margin-right: auto;
   margin-left: auto;
   max-width: 960px;
-}
-
-#main h1{
-  color: #444;
-  text-align: center;
 }
 
 #employer-list{
@@ -26,7 +34,8 @@ body {
   display: inline-block;
   margin: 5px;
   padding: 8px;
-  border-radius: 4px;
-  border: 1px solid #880e4f;
-  box-shadow: 1px 2px 3px rgbd(0,0,0,0.3);
+}
+
+#employer-list h2{
+  font-size: 30px;
 }

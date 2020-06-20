@@ -13,9 +13,12 @@ const client = new ApolloClient({
 function App() {
   return (
     <ApolloProvider client={client}>
-      <div id="main">
+      <div id="page-wrapper">
         <h1>Collin Bull</h1>
-        <EmployerList/>
+        <p>Note: I have legal right to work in the UK and do not require visa sponsorship</p>
+        <div id="main">
+          <EmployerList/>
+        </div>
       </div>
     </ApolloProvider>
   );
