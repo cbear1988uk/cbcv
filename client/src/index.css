@@ -28,6 +28,11 @@ body {
   max-width: 960px;
 }
 
+#employer-content{
+  justify-content: center;
+  align-items: center;
+}
+
 #employer-list h2{
   font-size: 30px;
   font-weight: lighter;

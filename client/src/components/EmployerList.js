@@ -25,7 +25,7 @@ class EmployerList extends Component{
     }else{
       return data.employers.map(employer => {
         return(
-          <div key={employer.id}>
+          <div id="employer-content" key={employer.id}>
             <h2>{employer.name}</h2>
             <li>{employer.location}</li>
             <li>{employer.positionHeld} - {employer.workDate}</li>
