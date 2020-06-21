@@ -4,6 +4,7 @@ import {ApolloProvider} from 'react-apollo';
 
 //Components
 import EmployerList from './components/EmployerList';
+import EducationList from './components/EducationList';
 
 //Apollo Client setup
 const client = new ApolloClient({
@@ -20,6 +21,7 @@ function App() {
         </div>
         <div id="main">
           <EmployerList/>
+          <EducationList/>
         </div>
       </div>
     </ApolloProvider>

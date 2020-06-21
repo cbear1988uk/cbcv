@@ -1,6 +1,7 @@
 const graphql = require('graphql');
 const _ = require('lodash');
 const Employer = require('../models/employer');
+const Education = require('../models/education');
 
 const {GraphQLObjectType,
   GraphQLString,
@@ -25,6 +26,18 @@ const EmployerType = new GraphQLObjectType({
   })
 });
 
+const EducationType = new GraphQLObjectType({
+  name: 'Education',
+  fields: () => ({
+    name: {type: GraphQLString},
+    location: {type: GraphQLString},
+    dateAttended: {type: GraphQLString},
+    description: {type: GraphQLString},
+    achievements: {type: GraphQLString},
+    id: {type: GraphQLID}
+  })
+});
+
 const RootQuery = new GraphQLObjectType({
   name: 'RootQueryType',
   fields:{
@@ -37,8 +50,21 @@ const RootQuery = new GraphQLObjectType({
     },
     employers:{
       type: new GraphQLList(EmployerType),
-      resolve(parents,args){
+      resolve(parents, args){
         return Employer.find({});
+      }
+    },
+    education:{
+      type: EducationType,
+      args: {id: {type: GraphQLID}},
+      resolve(parent, args){
+        return Education.findById(args.id);
+      }
+    },
+    educations:{
+      type: new GraphQLList(EducationType),
+      resolve(parent, args){
+        return Education.find({})
       }
     }
   }
@@ -70,6 +96,26 @@ const Mutation = new GraphQLObjectType({
           description3: args.description3
         });
         return employer.save();
+      }
+    },
+    addEducation: {
+      type: EducationType,
+      args: {
+        name: {type: new GraphQLNonNull(GraphQLString)},
+        location: {type: new GraphQLNonNull(GraphQLString)},
+        dateAttended: {type: new GraphQLNonNull(GraphQLString)},
+        description: {type: new GraphQLNonNull(GraphQLString)},
+        achievements: {type: new GraphQLNonNull(GraphQLString)}
+      },
+      resolve(parent, args){
+        let education = new Education({
+          name: args.name,
+          location: args.location,
+          dateAttended: args.dateAttended,
+          description: args.description,
+          achievements: args.achievements
+        });
+        return education.save();
       }
     }
   }
