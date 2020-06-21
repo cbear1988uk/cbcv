@@ -28,6 +28,7 @@ class EducationList extends Component{
             <li>{education.location}</li>
             <li>{education.dateAttended}</li>
             <p>{education.description}</p>
+            <h2>Achievements:</h2>
             <p>{education.achievements}</p>
           </div>
         );
