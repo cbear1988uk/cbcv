@@ -1,5 +1,5 @@
 body {
-  background: #5e5e5e;
+  background: #000000;
   text-align: center;
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: lighter;
@@ -35,6 +35,31 @@ body {
 #contact-info{
   list-style-type: none;
   color: #000000;
+  font-size: 18px;
+}
+
+#contact-info button{
+  background-color: #bec4bf;
+  border: none;
+  border-radius: 3px;
+  color: #000000;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 5px;
+}
+
+#contact-info button:hover{
+  color: #2776f5;
+}
+
+#contact-info a{
+  text-decoration: none;
+  color: #000000;
+}
+
+#contact-info a:hover{
+  color: #2776f5;
 }
 
 #page-header h1{
@@ -44,13 +69,14 @@ body {
   font-size: 80px;
   font-weight: lighter;
   margin-top: 0;
+  margin-bottom: 26px;
   padding-top: 150px;
 }
 
 #page-header p{
   color: #000000;
   font-weight: bold;
-  margin-bottom: 145px;
+  margin-bottom: 80px;
 }
 
 #headshot-image{
@@ -69,11 +95,17 @@ body {
 #cv-content{
   background: #bec4bf;
   padding: 10px;
-  border-radius: 15px;
-  margin-top: 30px;
+  border-radius: 8px;
+  margin-top: 20px;
   margin-right: auto;
   margin-left: auto;
   max-width: 960px;
+}
+
+#cv-content h3{
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: normal;
+  border-bottom: 1px solid #787878;
 }
 
 #employer-content{
@@ -134,4 +166,10 @@ body {
   padding: 8px;
   font-size: 16px;
   color: black;
+}
+
+#footer{
+  padding: 17px;
+  font-size: 12px;
+  color: #a3a3a3;
 }

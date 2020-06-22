@@ -19,8 +19,9 @@ function App() {
         <div id="page-header">
           <h1>Collin Bull</h1>
           <ul id="contact-info">
+            <button class="btn"><i class="fa fa-download"></i> Download CV</button>
             <li>07519 551240</li>
-            <li>collinjbull@gmail.com</li>
+            <li><a href="mailto:collinjbull@gmail.com">collinjbull@gmail.com</a></li>
           </ul>
           <p>Note: I have legal right to work in the UK and do not require visa sponsorship</p>
         </div>
@@ -28,6 +29,7 @@ function App() {
           <EmployerList/>
           <EducationList/>
         </div>
+        <p id="footer">cjbc 2020</p>
       </div>
     </ApolloProvider>
   );
