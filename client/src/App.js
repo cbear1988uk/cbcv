@@ -6,6 +6,7 @@ import {ApolloProvider} from 'react-apollo';
 import GeneralInfoList from './components/GeneralInfoList';
 import EmployerList from './components/EmployerList';
 import EducationList from './components/EducationList';
+import SkillList from './components/SkillList';
 
 //Apollo Client setup
 const client = new ApolloClient({
@@ -32,6 +33,7 @@ function App() {
           <GeneralInfoList/>
           <EmployerList/>
           <EducationList/>
+          <SkillList/>
         </div>
         <p id="footer">cjbc 2020</p>
       </div>
