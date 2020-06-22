@@ -18,8 +18,10 @@ function App() {
       <div id="page-wrapper">
         <div id="page-header">
           <h1>Collin Bull</h1>
+          <div id="download-button">
+            <a href="./images/collin_cv.pdf" download><i className="fa fa-download"></i> Download CV</a>
+          </div>
           <ul id="contact-info">
-            <button class="btn"><i class="fa fa-download"></i> Download CV</button>
             <li>07519 551240</li>
             <li><a href="mailto:collinjbull@gmail.com">collinjbull@gmail.com</a></li>
           </ul>
