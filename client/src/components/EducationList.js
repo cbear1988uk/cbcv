@@ -38,7 +38,7 @@ class EducationList extends Component{
   render(){
     return(
       <div id="cv-content">
-      <h3>Education</h3>
+        <h3>Education</h3>
         <ul id="education-list">
           {this.displayEducations()}
         </ul>

@@ -2,6 +2,7 @@ const graphql = require('graphql');
 const _ = require('lodash');
 const Employer = require('../models/employer');
 const Education = require('../models/education');
+const GeneralInfo = require('../models/generalInfo');
 
 const {GraphQLObjectType,
   GraphQLString,
@@ -38,6 +39,15 @@ const EducationType = new GraphQLObjectType({
   })
 });
 
+const GeneralInfoType = new GraphQLObjectType({
+  name: 'GeneralInfo',
+  fields: () => ({
+      title: {type: GraphQLString},
+      description: {type: GraphQLString},
+      id: {type: GraphQLID}
+  })
+});
+
 const RootQuery = new GraphQLObjectType({
   name: 'RootQueryType',
   fields:{
@@ -65,6 +75,19 @@ const RootQuery = new GraphQLObjectType({
       type: new GraphQLList(EducationType),
       resolve(parent, args){
         return Education.find({})
+      }
+    },
+    generalInfo:{
+      type: GeneralInfoType,
+      args: {id: {type: GraphQLID}},
+      resolve(parent, args){
+        return GeneralInfo.findById(args.id);
+      }
+    },
+    generalInfos:{
+      type: new GraphQLList(GeneralInfoType),
+      resolve(parent, args){
+        return GeneralInfo.find({})
       }
     }
   }
@@ -116,6 +139,20 @@ const Mutation = new GraphQLObjectType({
           achievements: args.achievements
         });
         return education.save();
+      }
+    },
+    addGeneralInfo: {
+      type: GeneralInfoType,
+      args: {
+        title: {type: new GraphQLNonNull(GraphQLString)},
+        description: {type: new GraphQLNonNull(GraphQLString)}
+      },
+      resolve(parent, args){
+        let generalInfo = new GeneralInfo({
+          title: args.title,
+          description: args.description
+        });
+        return generalInfo.save();
       }
     }
   }

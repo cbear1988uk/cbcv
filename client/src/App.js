@@ -3,6 +3,7 @@ import ApolloClient from 'apollo-boost';
 import {ApolloProvider} from 'react-apollo';
 
 //Components
+import GeneralInfoList from './components/GeneralInfoList';
 import EmployerList from './components/EmployerList';
 import EducationList from './components/EducationList';
 
@@ -28,6 +29,7 @@ function App() {
           <p>Note: I have legal right to work in the UK and do not require visa sponsorship</p>
         </div>
         <div id="main">
+          <GeneralInfoList/>
           <EmployerList/>
           <EducationList/>
         </div>

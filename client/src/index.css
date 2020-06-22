@@ -89,8 +89,8 @@ body {
   float: left;
   border-radius: 50%;
   border: 5px solid #cccccc;
-  margin-left: -75px;
-  margin-top: -75px;
+  margin-left: -100px;
+  margin-top: -125px;
   position: absolute;
 }
 
@@ -107,12 +107,25 @@ body {
 #cv-content h3{
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: normal;
-  border-bottom: 1px solid #787878;
 }
 
 #employer-content{
   justify-content: center;
   align-items: center;
+}
+
+#about-me-list{
+  padding-left: 0;
+}
+
+#general-info-content h2{
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 30px;
+  font-weight: lighter;
+}
+
+#general-info-content p{
+  padding-top: 10px;
 }
 
 #employer-list{
