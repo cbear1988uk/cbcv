@@ -14,6 +14,7 @@ const client = new ApolloClient({
 function App() {
   return (
     <ApolloProvider client={client}>
+      <div id="background-image"></div>
       <div id="page-wrapper">
         <div id="page-header">
           <h1>Collin Bull</h1>
