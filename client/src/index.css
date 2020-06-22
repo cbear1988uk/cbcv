@@ -1,5 +1,5 @@
 body {
-  background: #aab3ab;
+  background: #5e5e5e;
   text-align: center;
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: lighter;
@@ -11,7 +11,7 @@ body {
   background-color: #c5c9c7;
   background-position: center center;
   background-blend-mode: color-burn;
-  filter: blur(3px);
+  filter: blur(2px);
   width: 100%;
   height: 500px;
   margin: 0;
@@ -50,6 +50,18 @@ body {
 #page-header p{
   color: #000000;
   font-weight: bold;
+}
+
+#headshot-image{
+  background-image: url('./images/Headshot.png');
+  background-position: center top;
+  height: 185px;
+  width: 175px;
+  float: left;
+  border-radius: 50%;
+  border: 5px solid #cccccc;
+  margin-left: -75px;
+  margin-top: -75px;
 }
 
 #cv-content{

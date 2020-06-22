@@ -40,6 +40,8 @@ class EmployerList extends Component{
   render(){
     return(
       <div id="cv-content">
+      <div id="headshot-image"></div>
+      <h3>Work Experience</h3>
         <ul id="employer-list">
           {this.displayEmployers()}
         </ul>
