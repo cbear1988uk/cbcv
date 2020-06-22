@@ -25,7 +25,7 @@ function App() {
           </div>
           <ul id="contact-info">
             <li>07519 551240</li>
-            <li><a href="mailto:collinjbull@gmail.com">collinjbull@gmail.com</a></li>
+            <li><a href="mailto:collinjbull@gmail.com?subject=Website Feedback">collinjbull@gmail.com</a></li>
           </ul>
           <p>Note: I have legal right to work in the UK and do not require visa sponsorship</p>
         </div>
