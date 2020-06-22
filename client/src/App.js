@@ -17,7 +17,7 @@ function App() {
       <div id="page-wrapper">
         <div id="page-header">
           <h1>Collin Bull</h1>
-          <ul>
+          <ul id="contact-info">
             <li>07519 551240</li>
             <li>collinjbull@gmail.com</li>
           </ul>
