@@ -107,6 +107,7 @@ body {
 #cv-content h3{
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: normal;
+  text-decoration: underline;
 }
 
 #employer-content{
