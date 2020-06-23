@@ -223,3 +223,136 @@ body {
   font-size: 12px;
   color: #a3a3a3;
 }
+
+/*  *****Mobile Devices*****  */
+
+/*Iphone */
+@media only screen
+  and (min-device-width:320px)
+  and (max-device-width:568px)
+  and (-webkit-min-device-pixel-ratio: 2){
+
+  #background-image{
+    background-image: url('./images/Skye.JPG');
+    background-color: #c5c9c7;
+    background-position: center center;
+    background-blend-mode: color-burn;
+    filter: blur(2px);
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: block;
+    z-index: -1;
+    position: fixed;
+  }
+
+  #page-header{
+    margin-bottom: 200px;
+  }
+
+  #page-header h1{
+    color: #000000;
+  }
+
+  #download-button i{
+    padding-right: 25px;
+  }
+
+  #contact-info{
+    padding: 10px;
+  }
+
+  #headshot-image{
+    background-image: url('./images/Headshot.png');
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: inline-block;
+    position: relative;
+    height: 400px;
+    width: 400px;
+    border-radius: 50%;
+    border: 5px solid #cccccc;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-top: 0;
+    margin-left: 0;
+  }
+
+  #general-info-content{
+    text-align: left;
+    padding-left: 10px;
+  }
+
+  #employer-content li{
+    font-size: 3em;
+    font-style: italic;
+  }
+
+  #education-content li{
+    font-size: 3em;
+    font-style: italic;
+  }
+}
+
+/* Ipad/Tablet */
+@media only screen
+  and (min-device-width:768px)
+  and (max-device-width:1024px)
+  and (-webkit-min-device-pixel-ratio: 1){
+
+    #background-image{
+      background-image: url('./images/Skye.JPG');
+      background-color: #c5c9c7;
+      background-position: center center;
+      background-blend-mode: color-burn;
+      filter: blur(2px);
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      display: block;
+      z-index: -1;
+      position: fixed;
+    }
+
+    #page-header{
+      margin-bottom: 200px;
+    }
+
+    #page-header h1{
+      color: #000000;
+    }
+
+    #download-button i{
+      padding-right: 25px;
+    }
+
+    #headshot-image{
+      background-image: url('./images/Headshot.png');
+      background-position: center top;
+      border-radius: 50%;
+      border: 5px solid #cccccc;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      margin-left: 0;
+    }
+
+    #employer-content li{
+      font-size: 1.5em;
+      font-style: italic;
+    }
+
+    #employer-content p{
+      font-size: .5em;
+    }
+
+    #education-content li{
+      font-size: 1.5em;
+      font-style: italic;
+    }
+
+    #education-content p{
+      font-size: .5em;
+    }
+
+  }

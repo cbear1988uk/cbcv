@@ -31,7 +31,7 @@ class GeneralInfoList extends Component{
   render(){
     return(
       <div id="cv-content">
-      <div id="headshot-image"></div>
+        <div id="headshot-image"></div>
         <ul id="about-me-list">
           {this.displayGeneralInfos()}
         </ul>
