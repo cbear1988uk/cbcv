@@ -4,5 +4,6 @@ Client - React App, Apollo. Server - Node.js, Express, Graphql. DataBase - Mongo
 cd into Server
   'nodemon app'
 
+(separate tab)
 cd into Client
   'npm start'
